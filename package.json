@@ -1,0 +1,23 @@
+{
+  "name": "swingstoreapi",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
+    "bun-types": "latest",
+    "faker": "^6.6.6",
+    "prisma": "^5.2.0"
+  },
+  "scripts": {
+    "seed": "bun prisma/seed.ts"
+  },
+  "prisma": {
+    "seed": "bun prisma/seed.ts"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.2.0"
+  }
+}

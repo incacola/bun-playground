@@ -1,0 +1,43 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model GolfClub {
+  id Int @id @default(autoincrement())
+  brand String
+  type String
+  material String
+  price Decimal @db.Money
+  inStock Int
+}
+
+model GolfBall {
+  id Int @id @default(autoincrement())
+  brand String
+  type String
+  color String
+  price Decimal @db.Money
+  inStock Int
+}
+
+model Apparel {
+  id Int @id @default(autoincrement())
+  brand String
+  type String
+  color String
+  size String
+  price Decimal @db.Money
+  inStock Int
+}
+
+
+
