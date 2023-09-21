@@ -27,6 +27,15 @@ export class GolfBallsController {
     }
   }
 
+  static async readAll() {
+    try {
+      return await prisma.golfBall.findMany()
+    } catch (error) {
+      console.error("Error reading golf balls:", error);
+      return null;
+    }
+  }
+
   static async update(id: number, updatedGolfBall: Partial<GolfBall>) {
     try {
       const golfBall = await this.read(id);
