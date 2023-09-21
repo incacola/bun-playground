@@ -26,6 +26,15 @@ export class ApparelController {
     }
   }
 
+  static async readAll() {
+    try {
+      return await prisma.apparel.findMany()
+    } catch (error) {
+      console.error("Error reading an Apparel:", error);
+      return null;
+    }
+  }
+
   static async update(id: number, updatedApparel: Partial<Apparel>) {
     try {
       const apparel = await this.read(id);

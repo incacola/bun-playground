@@ -1,4 +1,4 @@
-import { Hono, Context } from 'hono';
+import { Hono } from 'hono';
 import { GolfBallsController } from "../controllers/GolfBallController";
 
 export function golfBallsRouteHandler(api: Hono) {
